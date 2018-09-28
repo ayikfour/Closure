@@ -1,0 +1,162 @@
+NEED TO BE FIXED:
+
+#POSTING MESSAGE
+should be showed up when success
+should be hidden after it
+
+#SESSION TIME
+show remaining session time
+
+#DATE
+
+#IMAGE LOCATION
+
+
+
+
+
+            <!-- this is the post -->
+            <div class="ui fluid link raised card post" id="3">
+                <!-- image -->
+                <!-- <div class="image">
+                    <img class="unsplash" src="">
+                </div> -->
+                <div class="content">
+                    <!-- avatar -->
+                    <img class="left floated ui mini rounded image" src="./images/avatar/elliot.jpg">
+                    <!-- dropdown menu  -->
+                    <a class="ui right floated dropdown item">
+                       <i class="angle black down icon"></i>
+                       <div class="menu">
+                         <div class="item">Delete Post</div>
+                         <div class="item">Archive</div>
+                       </div>
+                     </a>
+                     <!-- header -->
+                    <div class="header" style="margin-top: 0.5px">
+                      <h5>Elliot</h5>
+                    </div>
+                    <div class="meta">
+                      <span class="date">Posted 2h Ago</span>
+                    </div>
+                    <!-- content -->
+                    <div class="description">
+                       Abyss of loneliness.
+                    </div>
+                </div>
+                <!-- likes / comment -->
+                <div class="extra content">
+                    <span class="left floated">
+                        <i class="heart like icon"></i>
+                        17 likes
+                    </span>
+                </div>
+            </div>
+
+
+
+            CURRENT CODE
+            <!-- this is the post -->
+            <div class="ui fluid link raised card post">
+                <!-- image -->
+                <div class="image">
+                    <img class="unsplash" src="">
+                </div>
+                <div class="content" style="margin-bottom: -10px;">
+                  <!-- avatar -->
+                  <img class="left floated ui mini rounded image" src="./images/avatar/elliot.jpg">
+                  <!-- dropdown menu  -->
+                  <a class="ui right floated dropdown item">
+                    <i class="angle black down icon"></i>
+                    <div class="menu">
+                      <div class="item">Delete Post</div>
+                      <div class="item">Archive</div>
+                    </div>
+                  </a>
+                  <!-- header -->
+                  <div class="header" style="margin-top: 0.5px">
+                    <h5>Elliot</h5>
+                  </div>
+                  <div class="meta">
+                    <span class="date">Posted 2h Ago</span>
+                  </div>
+                </div>
+                <div class="content">
+                    <!-- content -->
+                    <div class="description">
+                       Abyss of loneliness.
+                    </div>
+                </div>
+                <!-- likes / comment -->
+                <div class="extra content">
+                    <span class="left floated">
+                        <i class="heart like icon"></i>
+                        17 likes
+                    </span>
+                </div>
+            </div>
+
+
+
+            //3
+
+            <div class="ui fluid raised card">
+              <div class="content">
+                <!-- avatar -->
+                <img class="ui left floated mini rounded image"src="./images/avatar/elliot.jpg">
+                <div class="header" style="margin-top: 0.5px">
+                  <h5><?php echo ucfirst($_SESSION['username']);?></h5>
+                </div>
+                <div class="meta" id="sessiontime">
+                  <!-- session timeout will be here                   -->
+                </div>
+                <!-- form text and file -->
+                <form class="ui form" method="POST"  id="post" enctype="multipart/form-data" >
+                  <div class="field">
+                    <textarea class="autoExpand form-group" style="resize: none;" rows='1' data-min-rows='0' id="caption" name="caption" placeholder="Share something.."></textarea>
+                    <input class="form-group" type="file" id="uploadfile" name="uploadfile" style="display:none;">
+                  </div>
+                  <!-- character counter -->
+                  <div class="left floated">
+                    <span id="textLength">0/240</span>
+                    <br>
+                    <span class="meta">Characters</span>
+                  </div>
+                  <!-- button -->
+                  <!-- image upload button -->
+                  <div class="right floated">
+                    <label class="ui animated button" for="uploadfile">
+                      <div class="visible content">
+                        <i class="camera icon"></i>
+                      </div>
+                      <div class="hidden content">
+                        upload
+                      </div>
+                    </label>
+                    <!-- submit button -->
+                    <button class="ui animated teal button" name="submit" type="submit">
+                      <div class="visible content">
+                        <i class="paper plane icon"></i>
+                      </div>
+                      <div class="hidden content">
+                        Stack it!
+                      </div>
+                    </button>
+                  </div>
+                  <div class="ui error message"></div>
+                </form>
+              </div>
+              <!-- img thumbnail -->
+              <div class="image">
+                <img class="imgbuffer" src="">
+              </div>
+              <!-- progress -->
+              <div class="ui teal bottom attached progress" data-value="1" data-total="241" id="progress">
+                <div class="bar"></div>
+              </div>
+              <!-- error message -->
+              <div class="ui bottom attached hidden message">
+                <i class="newspaper icon"></i>
+                You need to write or upload something before stacking :(
+              </div>
+            </div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>var timerStart = Date.now();</script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Closure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/semantic.css" rel="stylesheet" type="text/css">    
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/semantic.min.js"></script>        
+    <style>
+      .delete.icon {
+        display: none;
+      }
+    </style>
+    <script src="./js/index.js" defer></script>    
+  </head>
+
+  <body>
+    <div class="ui three column centered grid">
+        <div class="column" style="margin-top: 200px;">
+
+          <div class="ui basic segment">
+            <h1 class="ui header">Mustache</h1>                        
+            <p>To Do List using JS function.</p>
+
+            <div class="ui negative small compact message" style="display: none;" id="err-msg">
+              Please enter a value
+            </div>
+            <div class="ui action input">                
+                <input type="text" name="todo" id="todo">
+                <select class="ui compact selection dropdown" name="" id="days">
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+                  <option value="Sunday">Sunday</option>
+                </select>
+                <button class="ui teal icon button" id="submit">
+                  <i class="paper plane icon"></i>
+                </button>
+              </div>            
+          </div>
+       
+            <div class="ui basic segment">
+              <div class="ui list" id="list">
+               <!-- <div class="item">
+                  <div class="ui purple horizontal label">
+                   Sabtu
+                   <i class="delete icon"></i>
+                  </div>
+                  school
+               </div> -->
+              </div>
+            </div>
+        </div>            
+    </div>    
+  </body>  
+</html>
+
+<script>
+  $('#days').dropdown();     
+</script>
+<!-- <script src="./js/index.js"></script>     -->
